@@ -34,45 +34,58 @@
         echo "Error: " . $e->getMessage();
     }
     
-        if (isset($_POST['ajouter'])){
+    // if(isset($_POST['ajouter']) ) {
           
      
-        $url =  "imgs/categories/".$_FILES['t']['name'] ;
+    //     $url =  "imgs/categories/".$_FILES['t']['name'] ;
        
-        // print_r($_FILES);
-        if ($_FILES["t"]["error"]) {
-        $err = "file not found";
-         } else {
-        move_uploaded_file($_FILES["t"]["tmp_name"], $url);
-        }
-        $req = $conn->prepare("INSERT INTO categorie SET name = ?, image = ?");
-        $req->execute([$_POST['nomC'],$_POST['t']]);
-        echo "Ok";
-    }
+    //     //print_r($_FILES);
+    //     if ($_FILES["t"]["error"]) {
+    //     $err = "file not found";
+    //      } else {
+    //     move_uploaded_file($_FILES["t"]["tmp_name"], $url);
+    //     }
+    //     // $req = $conn->prepare("INSERT INTO categorie SET name = ?, image = ?");
+    //     // $req->execute($_POST['nomC'],$_POST['t']);
+    //     $nom=$_POST['nomC'];
+    //     $image=$_FILES["t"]["name"];
+    //     $req = $conn->prepare("INSERT INTO categorie  (name, image) 
+        
+    //     VALUES ('$nom', '$image')");
+    //     $req->execute();
+
+        
+    //     // echo "Ok";
+    //     header('location:SHcategorie.php') ;
+    // } else {  
+    // }
+    
 
 
-    $conn = null;
+    // $conn = null;
     echo "</table>";
     ?>
   
-    </form>
+   
     <table>
-            <tr>
+            <tr class="text-center">
                 <th>id</th>
-                <th>categorie</th>
+                <th >cat2gorie</th>
+                <th>lien image</th>
+                <th>image</th>
                 <th>Action</th>
             </tr>
             <?php foreach ($categories as $categorie) :; ?>
-                <tr>
+                <tr class="text-center">
                     <td><?= $categorie['Id'] ?></td>
-                    <td><?= $categorie['Name'] ?></td>
-                    <td><?= $categorie['Image'] ?></td>
-                    <td ><img src="imgs/categories/<?= $categorie['Image'] ?>" alt="" width="100px" height="100px"></td>
+                    <td ><?= $categorie['name'] ?></td>
+                    <td><?= $categorie['image'] ?></td>
+                    <td ><img src="imgs/categories/<?= $categorie['image'] ?>" alt="" width="100px" height="100px"></td>
                    
                     <td>
                         <div>
-                            <div> <a href="Ccategorie.php?tuteur-update-id=<?= $categorie['Id'] ?>" class="btn btn-success col-md-5">Edit</a>
-                                <a href="Ccategorie.php?tuteur-del-id=<?= $categorie['Id'] ?>" class="btn btn-danger col-md-5">Delete</a>
+                            <div> <a href="ModifCategorie.php?categorie-update-id=<?= $categorie['Id'] ?>" class="btn btn-success col-md-5">Edit</a>
+                                <a href="traitement-categorie.php?categorie-del-id=<?= $categorie['Id'] ?>" class="btn btn-danger col-md-6">Delete</a>
                             </div>
                         </div>
                     </td>

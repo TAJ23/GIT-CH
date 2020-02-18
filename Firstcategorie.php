@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'db.php' ;?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<?php require "db.php"; ?>
-<body>
 
+<body>
     <?php include 'header.php'; ?>
+
+
     <main class="container">
 
-        <form  enctype="multipart/form-data" method="POST" action="Cauteur.php">
 
-
-            <div class="form-group">
-
-
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Nom d'auteur</label>
-                    <input type="text" class="form-control bg-light" name="nom" placeholder="Votre nom">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">E-mail</label>
-                    <input type="text" class="form-control bg-light" name="email" placeholder="Votre image">
-                </div>
-
-                
-
-                <div><input type="file" name="t"/>importer une image</div>
-
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary" name="ajouter" >Ajouter</button>
-                   
-                </div>
-
-
-        </form>
+        
+     <div class="row text-center justify-content center">
+        <div class="col-6 mt-5"><a href="SHcategorie.php"><img src="imgs/articles/pexels-photo-48604.jpeg" width="400px" height="400px"></a></div>
+        <div class="col-6 mt-5"><a href="SHcategorie.php"><img src="imgs/articles/pexels-photo-1199957.jpeg"  width="400px" height="400px"></a></div>
+        <div class="col-6 mt-5"><a href="SHcategorie.php"><img src="imgs/articles/pexels-photo-288621.jpeg"  width="400px" height="400px"></a></div>
+    <?php  ?> 
+    
+    
+    </div>
 
 
 
 
 
+        <div class="text-center">
+            <a href="../blogCH/CCategorie.php" class="btn btn-primary ">Ajouter</a>
 
+           
+        </div>
+        <!--bouton-->
     </main>
 </body>
 <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'db.php';?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.php';?>
 
 
 
@@ -28,7 +28,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary ">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary ">Lire plus</a>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
 
@@ -139,13 +139,13 @@
                             <p class="text-muted">catégorie</p>
                             <p class="text-muted">Auteur</p>
                         </div>
-                        <a href="#" class="btn btn-primary">Lire plus</a>
+                        <a href="../blogCH/UnseulArticle.php" class="btn btn-primary">Lire plus</a>
                     </div>
                 </div>
             </div>
             <!--row fin des cardes-->
 
-            <div class="container ml-4"><a href="#" class="btn btn-primary row text-center col-12">voir plus d'article</a></div>
+            <div class="container ml-4"><a href="SHarticle.php" class="btn btn-primary row text-center col-12">voir plus d'article</a></div>
 
 
         </div>

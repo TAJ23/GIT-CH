@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php include 'db.php' ;?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<?php require "db.php"; ?>
 <body>
-
-    <?php include 'header.php'; ?>
-    <main class="container">
-
-        <form  enctype="multipart/form-data" method="POST" action="Cauteur.php">
+<?php include 'header.php'; ?> 
 
 
-            <div class="form-group">
+
+<?php
+    
+    try {
+        
+        $stmt = $conn->prepare("SELECT * FROM article");
+        $stmt->execute();
+        $articles=$stmt->fetchAll();
+        // print_r($auteurs);
+
+    
+        
+    }
+    catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+
+    
+    
+        
+      
+  
 
 
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Nom d'auteur</label>
-                    <input type="text" class="form-control bg-light" name="nom" placeholder="Votre nom">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">E-mail</label>
-                    <input type="text" class="form-control bg-light" name="email" placeholder="Votre email">
-                </div>
-
+    $conn = null;
+    echo "</table>";
+    ?>
+   
+   <table>
+            <tr class="text-center">					
+                <th>Id</th>
+                <th style="margin-left:10px">Title</th>
+                <th>Contenue</th>
+                <th>Image</th>
+                <th>date</th>
+                <th>IdCategorie</th>
+                <th>IdAuteur</th>
+                <th style="margin-left:10px">Action</th>
+            </tr>
+            <?php foreach ($articles as $article) :; ?>
+                <tr>
+                    <td><?= $article['Id'] ?></td>
+                    <td><?= $article['Title'] ?></td>
+                    <td><?= $article['Contenue'] ?></td>
+                    <td ><img src="imgs/articles/<?= $article['Image'] ?>" alt="" width="100px" height="100px"></td>
+                    <td><?= $article['date'] ?></td>
+                    <td><?= $article['IdCategorie'] ?></td>
+                    <td><?= $article['IdAuteur'] ?></td>
+                    <td>
+                        <div>
+                            <div> <a href="ModifArticle.php?update-art=<?= $article['Id'] ?>" class="btn btn-success col-md-5">Edit</a>
+                                <a href="traitement-article.php?del-art=<?= $article['Id'] ?>" class="btn btn-danger col-md-6">Delete</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
                 
-
-                <div><input type="file" name="t"/>importer une image</div>
-
-                <div class="text-center">
-                    <button type="submit" class="btn btn-primary" name="ajouter" value="submitted">Ajouter</button>
-                   
-                </div>
-
-                
-        </form>
-
-
-
-
-
-
-    </main>
+            <?php endforeach; ?> 
+        </table>
+     
 </body>
+
+
 <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
 
 <!-- Bootstrap core CSS -->
@@ -67,4 +93,5 @@
 <!-- Custom styles for this template -->
 <link href="blog.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </html>

@@ -12,28 +12,41 @@
     <?php include 'header.php'; ?>
     <main class="container">
 
-        <form  enctype="multipart/form-data" method="POST" action="Cauteur.php">
+
+    <?php      $mod=$_GET['Auteur-update-id'];
+
+ $sql="SELECT * FROM auteur WHERE IdAuteur=$mod;";
+ $stmt=$conn->prepare($sql);
+ $stmt->execute();
+
+ $singleAuteur=$stmt->fetch();
+//  print_r($singleCauteur);
+
+?>
+
+
+        <form  enctype="multipart/form-data" method="POST" action="traitement-auteur.php">
 
 
             <div class="form-group">
 
-
+            <input type="hidden" name="id-modif"  value="<?=$singleAuteur['IdAuteur']?>" >
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nom d'auteur</label>
-                    <input type="text" class="form-control bg-light" name="nom" placeholder="Votre nom">
+                    <input type="text" class="form-control bg-light" name="nom" value="<?=$singleAuteur['Fullname']?>">
                 </div>
 
                 <div class="form-group">
                     <label for="exampleFormControlInput1">E-mail</label>
-                    <input type="text" class="form-control bg-light" name="email" placeholder="Votre email">
+                    <input type="text" class="form-control bg-light" name="email" value="<?=$singleAuteur['Email']?>">
                 </div>
 
                 
 
-                <div><input type="file" name="t"/>importer une image</div>
+                <div><input type="file" name="t" value="<?=$singleAuteur['Avatar']?>"/>importer une image</div>
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" name="ajouter" value="submitted">Ajouter</button>
+                    <button type="submit" class="btn btn-primary" name="modifier" value="submitted">Modifier</button>
                    
                 </div>
 

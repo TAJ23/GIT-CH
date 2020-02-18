@@ -1,160 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'db.php'; ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-
-
     <main class="container">
 
 
+        <form method="post" action="traitement-article.php" enctype="multipart/form-data">
 
-
-        tous mes articles seront ici////
-        ajouter de nouveaux articles redirection
-
-        <div class=" row mt-5 d-flex justify-content-around ">
-
-            <div class="card col-3 my-2" style="margin-left:40px">
-                <img src="imgs/articles/pexels-photo-566566.jpeg" width="100%" height="200px" class="card-img-top " alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Titre</label>
+                <input type="text" class="form-control bg-light" name="titre" placeholder="Titre">
             </div>
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-675951.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Article</label>
+                <textarea class="form-control bg-light" name="textArticle" rows="5"></textarea>
             </div>
 
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-936611.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title text-center">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
-            </div>
-        </div>
-        <!--row card-->
-        <div class=" row mt-5 d-flex justify-content-around ">
-            <div class="card col-3  my-2" style="margin-left:40px">
-                <img src="imgs/articles/pexels-photo-1279330.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title text-center">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
-            </div>
+            <div><input type="file" name="t" />importer une image</div>
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-323682.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">date</label>
+                <input type="text" class="form-control bg-light" name="date">
             </div>
 
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-566566.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1 ">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
-            </div>
-        </div>
-        <!--row around-->
-        <div class=" row mt-5 d-flex justify-content-around ">
-            <div class="card col-3  my-2" style="margin-left:40px">
-                <img src="imgs/articles/pexels-photo-936611.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1 ">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
+
+
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Catégorie</label>
+                <select class="form-control bg-light " name="categorie">
+                    <?php
+
+
+
+                    $stmt = $conn->prepare("SELECT id, name FROM categorie");
+                    $stmt->execute();
+                    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+                    foreach ($stmt->fetchAll() as $k => $v) : ?>
+                        <option value="<?php echo  $v['id']; ?>"> <?php echo  $v['name']; ?> </option>";
+
+
+                    <?php endforeach;
+                    ?>
+                </select>
             </div>
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-699953.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1 ">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
+
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Nom d'auteur</label>
+                <select class="form-control bg-light" name="auteur">
+
+                    <?php
+
+
+
+                    $stmte = $conn->prepare("SELECT IdAuteur, Fullname FROM auteur");
+                    $stmte->execute();
+                    $result = $stmte->setFetchMode(PDO::FETCH_ASSOC);
+
+                    foreach ($stmte->fetchAll() as $ka => $va) : ?>
+                        <option value="<?php echo  $va['IdAuteur']; ?>"> <?php echo  $va['Fullname']; ?> </option>";
+
+
+                    <?php endforeach;
+                    ?>
+
+
+
+                </select>
             </div>
+            <button type="submit" class="btn btn-primary" name="ajouter" value="submitted">Ajouter</button>
 
-            <div class="card col-3  my-2">
-                <img src="imgs/articles/pexels-photo-1199957.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="row d-flex justify-content-between"><p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p></div>
-                    <a href="#" class="btn btn-primary mb-1">Lire plus</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary mb-1 ">modifier l'article</a>
-                    <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">supprimer l'article</a>
-                </div>
-            </div>
-         </div><!--row fin des cardes-->
+        </form>
 
 
 
 
 
-
-
-
-
-        <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">Ajouter</a>
-        modifier et supprimer redirection
 
 
 
@@ -184,5 +120,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- Custom styles for this template -->
 <link href="blog.css" rel="stylesheet">
+
+
 
 </html>

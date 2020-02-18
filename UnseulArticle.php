@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'db.php'; ?>
 
 <head>
     <meta charset="UTF-8">
@@ -8,38 +9,26 @@
 </head>
 
 <body>
+
     <?php include 'header.php'; ?>
-    <?php require 'db.php' ;?>
     <main class="container">
 
-
-
-
-        <form method="post" action="Cmusique.php">
-           
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Catégorie</label>
-                <input type="text" class="form-control" name="nomC" placeholder="Titre">
-            </div>
-
-         
-
-            <div><input type="file" name="t">importer une image</div>
-
-            <button type="submit" class="btn btn-primary" name="ajouter">Ajouter</button>
-            
-
-
-        </form>
-
-
-
-
-
+        <div class="card col-12 my-2  ">
+            <img src="imgs/articles/pexels-photo-566566.jpeg" width="100%" height="400px" class="card-img-top " alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro eveniet debitis quisquam officia assumenda, molestias rem praesentium illo sed numquam vel molestiae voluptates placeat aliquid tempora, aperiam saepe repellendus.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quaerat neque nostrum aut error a totam, fugit voluptatem molestiae possimus, libero, nihil maiores? Dolore, ipsam. Placeat voluptatibus saepe temporibus veritatis.
+                </p>
+                <div class="row d-flex justify-content-between">
+                    <p class="text-muted">catégorie</p>
+                    <p class="text-muted">Auteur</p>
+                </div>
+        </div>
 
 
     </main>
-    </form>
 </body>
 <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
 

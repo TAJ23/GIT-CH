@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'db.php' ;?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,29 +9,33 @@
 
 <body>
     <?php include 'header.php'; ?>
-
-
+    <?php require 'db.php' ;?>
     <main class="container">
 
 
-        
-     <div class="row text-center justify-content center">
-        <div class="col-6 mt-5"><a href="Cmusique.php"><img src="imgs/articles/pexels-photo-48604.jpeg" width="400px" height="400px"></a></div>
-        <div class="col-6 mt-5"><a href="Cmusique.php"><img src="imgs/articles/pexels-photo-1199957.jpeg"  width="400px" height="400px"></a></div>
-        <div class="col-6 mt-5"><a href="Cmusique.php"><img src="imgs/articles/pexels-photo-288621.jpeg"  width="400px" height="400px"></a></div>
-     </div>
 
 
-
-
-
-        <div class="text-center">
-            <a href="../blogCH/SingleCategorie.php" class="btn btn-primary ">Ajouter</a>
-
+        <form method="post" action="traitement-categorie.php" enctype="multipart/form-data">
            
-        </div>
-        <!--bouton-->
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Catégorie</label>
+                <input type="text" class="form-control" name="nomC" placeholder="Titre">
+            </div>
+
+         
+
+            <div> <input type="file" name="t" /> importer une image</div>
+
+            <button type="submit" class="btn btn-primary" name="ajouter" value="submitted">Ajouter</button>
+            
+
+
+        </form>
+
+        
+
     </main>
+    </form>
 </body>
 <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
 
