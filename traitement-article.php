@@ -1,8 +1,8 @@
 <?php 
 
- include 'db.php' ;
+ require 'db.php' ;
 
-
+// ***********************ajouter article******************************************************
 
 if(isset($_POST['ajouter'])) {
              
@@ -33,7 +33,7 @@ if(isset($_POST['ajouter'])) {
            }
 
 
-
+// ***********************Supprimer article******************************************************
        
             if(isset($_GET['del-art'])){
                 $idd= $_GET['del-art'];
@@ -46,23 +46,13 @@ if(isset($_POST['ajouter'])) {
            header('location:SHarticle.php') ;
             }
 
-            // if(isset($_POST['update-art'])){
-
-            //     $idd= $_POST['update-art'];
-
-            //     $sql = "SELECT * FROM article  WHERE Id='$idd'";
-     
-            //     // use exec() because no results are returned
-            //     $conn->exec($sql);
-            //     echo "Record deleted successfully";
-            //     header('location:SHarticle.php') ;
-            //      }
+            
 
 
 
 
 
-
+// ***********************Modifier article******************************************************
 
 
 
@@ -98,6 +88,22 @@ if(isset($_POST['ajouter'])) {
            echo "Record update successfully";
            header('location:SHarticle.php') ;
             }
+// ***********************ajouter Commentaire******************************************************
 
-       
-?>
+
+if(isset($_GET['comment'])) {
+
+
+    $idcomment=$_GET['comment'];
+    $nom=$_GET['Nickname'];
+    $contenu=$_GET['Contenue'];
+   
+    
+    $req = $conn->prepare("INSERT INTO commentaire SET Nickname = ? , Contenue = ?, IdArticle =?");
+    $req->execute([$nom,$contenu,$idcomment]);
+    header('location: UnseulArticle.php?lireplus='.$idcomment);
+
+    
+    
+
+}
