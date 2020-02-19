@@ -1,0 +1,154 @@
+ <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-675951.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+
+
+            <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-936611.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-center">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+        </div>
+        <!--row card-->
+        <div class=" row mt-5 d-flex justify-content-around ">
+            <div class="card col-3  my-2" style="margin-left:40px">
+                <img src="imgs/articles/pexels-photo-1279330.jpeg" width="100%" height="200px" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-center">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+
+            <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-323682.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+
+
+            <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-566566.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+        </div>
+        <!--row around-->
+        <div class=" row mt-5 d-flex justify-content-around ">
+            <div class="card col-3  my-2" style="margin-left:40px">
+                <img src="imgs/articles/pexels-photo-936611.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+
+            <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-699953.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+
+            <div class="card col-3  my-2">
+                <img src="imgs/articles/pexels-photo-1199957.jpeg" width="100%" height="200px" class="card-img-top" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="row d-flex justify-content-between">
+                        <p class="text-muted">catégorie</p>
+                        <p class="text-muted">Auteur</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around mt-5">
+                        <a href="../blogCH/SHarticle.php"><i class="fa fa-pencil" style="font-size:60px;color:yellow;text-shadow:2px 2px 4px #000000;"></i></a>
+                        <a href="../blogCH/SHarticle.php">
+                            <i class="fa fa-trash" style="font-size:60px;color:red;text-shadow:2px 2px 4px #000000;"></i></a>
+                    </div><!--icons-->
+                </div>
+            </div>
+        </div>
+        <!--row fin des cardes-->
+
+
+
+
+
+
+
+
+
+        <a href="../blogCH/SingleArticle.php" class="btn btn-primary ">Ajouter</a>
+        modifier et supprimer redirection

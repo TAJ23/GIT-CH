@@ -12,7 +12,6 @@
     <?php include 'header.php'; ?>
 
 
-
     <h1 class="text-center text-dark mt-5">MON BLOG</h1>
     <main class="container">
 
@@ -22,36 +21,50 @@
 
 
         <?php
-        $quer = "SELECT * FROM categorie;";
+         $IdCat=$_GET['lireplus'];
+
+        //  $quer="SELECT * FROM article ,categorie WHERE IdCategorie = $IdCat; ";
+        $quer = "SELECT *,article.Id as id_art FROM article , auteur , categorie
+        WHERE  article.IdCategorie = categorie.Id AND article.IdAuteur=auteur.IdAuteur AND  categorie.Id=$IdCat;";
 
         $result = $conn->query($quer);
         $datas = $result->fetchAll();
+        // print_r($datas);
 
+        //  $quer->execute([$_GET['lireplus']]);
+        // $datas = $quer->fetchall();
+
+        
 
 
 
         ?>
-
-
-        <div class="row ml-5">
-
-
-
+        <div class="row ">
             <?php foreach ($datas as $data) : ?>
 
 
-                <!-- <div class="row  ml-5 "> -->
-                <div class="col-md-5 mt-5"><a href="articleCategorie.php?lireplus=<?= $data['Id'] ?>"><img src="imgs/categories/<?= htmlentities($data['image']) ?>" width="400px" height="400px"></a></div>
-
-                <!-- </div> -->
+                <div class="card col-4 my-3">
+                    <img src="imgs/articles/<?= htmlentities($data['Image']) ?>" width="100%" height="200px" class="card-img-top ">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><?= htmlentities($data['Title']) ?></h5>
+                        <p class="card-text"><?= substr($data['Contenue'], 0, 100) . '......' ?></p>
+                        <div class="row d-flex justify-content-between">
+                            <!---->
+                            <p class="text-muted"><?= htmlentities($data['name']) ?></p>
+                            <p class="text-muted"><?= htmlentities($data['Fullname']) ?></p>
+                        </div>
+                        <p class="text-muted"><?= htmlentities($data['date']) ?></p>
+                        <a href="../blogCH/UnseulArticle.php?lireplus=<?= $data['id_art'] ?>" class="btn btn-primary " <?php ?>>Lire plus</a>
+                    </div>
+                </div>
 
 
             <?php endforeach; ?>
+        </div>
 
-        </div>
-        <div class="text-center">
-            <a href="../blogCH/CCategorie.php" class="btn btn-primary ">Ajouter</a>
-        </div>
+
+
+
 
 
     </main>

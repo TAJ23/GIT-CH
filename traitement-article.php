@@ -20,12 +20,11 @@ if(isset($_POST['ajouter'])) {
              $titre=$_POST['titre'];
              $article=$_POST['textArticle'];
              $image=$_FILES["t"]["name"];
-             $date=$_POST['date'];
              $categorie=$_POST['categorie'];
              $auteur=$_POST['auteur'];
              $req = $conn->prepare("INSERT INTO article  (Title,Contenue,Image,Date,IdCategorie,IdAuteur) 
              
-             VALUES ('$titre','$article', '$image','$date','$categorie','$auteur')");
+             VALUES ('$titre','$article', '$image',NOW(),'$categorie','$auteur')");
              $req->execute();
      
              
@@ -82,7 +81,7 @@ if(isset($_POST['ajouter'])) {
     }
    
     $titre=$_POST['titre'];
-    $textArticle=$_POST['textArticle'];
+    $textArticle=$_POST['textArticle']; 
     $image=$_FILES["t"]["name"];
     $date=$_POST['date'];
     $categorie=$_POST['categorie'];

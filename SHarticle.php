@@ -34,7 +34,6 @@
   
 
 
-    $conn = null;
     echo "</table>";
     ?>
    

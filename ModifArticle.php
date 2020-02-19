@@ -16,10 +16,13 @@
 
 
 
-<?php      $mod=$_GET['update-art'];
+<?php $mod=$_GET['update-art'];
+    // print_r($mod);
 
 $sql="SELECT * FROM article WHERE Id=$mod;";
+
 $stmt=$conn->prepare($sql);
+// print_r($stmt);
 $stmt->execute();
 
 $singleArticle=$stmt->fetch();

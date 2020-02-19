@@ -1,18 +1,20 @@
 <?php require "db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<?php include 'header.php'; ?>
+    <?php include 'header.php'; ?>
 
-<?php
+    <?php
 
 
-  
+
 
     $servername = "localhost";
     $username = "root";
@@ -24,78 +26,49 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $stmt = $conn->prepare("SELECT * FROM categorie");
         $stmt->execute();
-        $categories=$stmt->fetchAll();
+        $categories = $stmt->fetchAll();
         // print_r($auteurs);
 
-    
-        
-    }
-    catch(PDOException $e) {
+
+
+    } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
-    
-    // if(isset($_POST['ajouter']) ) {
-          
-     
-    //     $url =  "imgs/categories/".$_FILES['t']['name'] ;
-       
-    //     //print_r($_FILES);
-    //     if ($_FILES["t"]["error"]) {
-    //     $err = "file not found";
-    //      } else {
-    //     move_uploaded_file($_FILES["t"]["tmp_name"], $url);
-    //     }
-    //     // $req = $conn->prepare("INSERT INTO categorie SET name = ?, image = ?");
-    //     // $req->execute($_POST['nomC'],$_POST['t']);
-    //     $nom=$_POST['nomC'];
-    //     $image=$_FILES["t"]["name"];
-    //     $req = $conn->prepare("INSERT INTO categorie  (name, image) 
-        
-    //     VALUES ('$nom', '$image')");
-    //     $req->execute();
-
-        
-    //     // echo "Ok";
-    //     header('location:SHcategorie.php') ;
-    // } else {  
-    // }
-    
 
 
-    // $conn = null;
+
+
+
     echo "</table>";
     ?>
-  
-   
+
+
     <table>
+        <tr class="text-center">
+            <th>id</th>
+            <th>cat2gorie</th>
+            <th>lien image</th>
+            <th>image</th>
+            <th>Action</th>
+        </tr>
+        <?php foreach ($categories as $categorie) :; ?>
             <tr class="text-center">
-                <th>id</th>
-                <th >cat2gorie</th>
-                <th>lien image</th>
-                <th>image</th>
-                <th>Action</th>
-            </tr>
-            <?php foreach ($categories as $categorie) :; ?>
-                <tr class="text-center">
-                    <td><?= $categorie['Id'] ?></td>
-                    <td ><?= $categorie['name'] ?></td>
-                    <td><?= $categorie['image'] ?></td>
-                    <td ><img src="imgs/categories/<?= $categorie['image'] ?>" alt="" width="100px" height="100px"></td>
-                   
-                    <td>
-                        <div>
-                            <div> <a href="ModifCategorie.php?categorie-update-id=<?= $categorie['Id'] ?>" class="btn btn-success col-md-5">Edit</a>
-                                <a href="traitement-categorie.php?categorie-del-id=<?= $categorie['Id'] ?>" class="btn btn-danger col-md-6">Delete</a>
-                            </div>
+                <td><?= $categorie['Id'] ?></td>
+                <td><?= $categorie['name'] ?></td>
+                <td><?= $categorie['image'] ?></td>
+                <td><img src="imgs/categories/<?= $categorie['image'] ?>" alt="" width="100px" height="100px"></td>
+
+                <td>
+                    <div>
+                        <div> <a href="ModifCategorie.php?categorie-update-id=<?= $categorie['Id'] ?>" class="btn btn-success col-md-5">Edit</a>
+                            <a href="traitement-categorie.php?categorie-del-id=<?= $categorie['Id'] ?>" class="btn btn-danger col-md-6">Delete</a>
                         </div>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-        <div class="text-center">
-                    <a href="SingleCategorie.php"  class="btn btn-primary" name="ajouter" >Ajouter une nouvelle categorie</a>
-                   
-                </div>
+                    </div>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    
 </body>
 <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
 
@@ -116,4 +89,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- Custom styles for this template -->
 <link href="blog.css" rel="stylesheet">
+
 </html>

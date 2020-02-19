@@ -9,24 +9,56 @@
 </head>
 
 <body>
-
     <?php include 'header.php'; ?>
+
+
+    <h1 class="text-center text-dark mt-5">MON BLOG</h1>
     <main class="container">
 
-        <div class="card col-12 my-2  ">
-            <img src="imgs/articles/pexels-photo-566566.jpeg" width="100%" height="400px" class="card-img-top " alt="...">
-            <div class="card-body text-center">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum porro eveniet debitis quisquam officia assumenda, molestias rem praesentium illo sed numquam vel molestiae voluptates placeat aliquid tempora, aperiam saepe repellendus.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi quaerat neque nostrum aut error a totam, fugit voluptatem molestiae possimus, libero, nihil maiores? Dolore, ipsam. Placeat voluptatibus saepe temporibus veritatis.
-                </p>
-                <div class="row d-flex justify-content-between">
-                    <p class="text-muted">catégorie</p>
-                    <p class="text-muted">Auteur</p>
+
+
+        <image></image>
+
+
+        <?php
+
+        $quer = $conn->prepare('SELECT * FROM article , auteur , categorie
+         WHERE article.IdAuteur = auteur.IdAuteur AND article.IdCategorie = categorie.Id AND article.Id=?');
+        $quer->execute([$_GET['lireplus']]);
+        $data = $quer->fetch();
+
+
+
+
+
+
+        ?>
+        <div style="margin-left:300px">
+
+
+
+            <div class="card col-8 my-5 ">
+                <img src="imgs/articles/<?= htmlentities($data['Image']) ?>" width="100%" height="200px" class="card-img-top ">
+                <div class="card-body text-center">
+                    <h5 class="card-title"><?= htmlentities($data['Title']) ?></h5>
+                    <p class="card-text"><?= htmlentities($data['Contenue'])   ?></p>
+                    <div class="row d-flex justify-content-between">
+                        <!---->
+                        <p class="text-muted"><?= htmlentities($data['name']) ?></p>
+                        <p class="text-muted"><?= htmlentities($data['Fullname']) ?></p>
+                    </div>
+                    <p class="text-muted"><?= htmlentities($data['date']) ?></p>
+                   
                 </div>
+            </div>
+
+
+
         </div>
 
+      <form action=""> 
+    <input type="textarea">
+    </form> 
 
     </main>
 </body>

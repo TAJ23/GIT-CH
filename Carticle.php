@@ -29,10 +29,6 @@
 
             <div><input type="file" name="t" />importer une image</div>
 
-            <div class="form-group">
-                <label for="exampleFormControlInput1">date</label>
-                <input type="text" class="form-control bg-light" name="date">
-            </div>
 
 
 
