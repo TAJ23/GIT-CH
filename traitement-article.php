@@ -107,3 +107,22 @@ if(isset($_GET['comment'])) {
     
 
 }
+// ***********************Supprimer commentaire******************************************************
+       
+if(isset($_GET['del-comt'])){
+    $idd= $_GET['del-comt'];
+    $idArticle= $_GET['idarticles'];
+    
+
+// $sql = "DELETE FROM commentaire  WHERE IdCommentaire='$idd'";
+
+// // use exec() because no results are returned
+// $conn->exec($sql);
+
+$req = $conn->prepare("DELETE FROM commentaire WHERE IdCommentaire = ? ");
+$req->execute([$idd]);
+
+echo "Record deleted successfully";
+
+header('location: UnseulArticle.php?lireplus='.$idArticle) ;
+}

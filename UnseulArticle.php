@@ -113,6 +113,7 @@ $commentaires = $comm->fetchAll();
                         <p><strong><?= $commentaire['Nickname'];  ?></strong></p>
                         <p><?= $commentaire['Contenue'];  ?></p>
                     </div>
+                    <a href="traitement-article.php?del-comt=<?=$commentaire['IdCommentaire']?>&idarticles=<?= $idarticle ?>" class="btn btn-success col-md-5">Supprimer</a>
                 </div>
             <?php endforeach;  ?>
         </div>
